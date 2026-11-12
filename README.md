@@ -8,6 +8,7 @@ A Claude skill that turns Claude into a professor and exam coach for the Nepal E
 
 - **Teaches the whole syllabus.** All 10 chapters and 60 sub-chapters of the official ACtE syllabus are built in. Lessons go one concept at a time, with a question after each.
 - **Sets NEC-style questions.** Four-option, one-mark MCQs with explanations, plus numericals, code tracing and short answers.
+- **Matches the official model set.** Question style, level and paper layout follow an analysis of NEC's official 100-question model set. The skill describes that set but does not contain its questions.
 - **Runs mock exams.** Full (100 questions), half (50) or single-chapter papers, delivered in blocks of 10, with no answers until you submit.
 - **Tracks mastery.** Five levels per sub-chapter with numeric criteria, an error log and a spaced revision schedule.
 - **Carries progress between chats.** Claude prints a short progress record. You save it and paste it back next time.
@@ -87,8 +88,11 @@ Each chapter has 6 sub-chapters. The full topic lists are in `SKILL.md`.
 | Questions | 100 multiple-choice, 1 mark each, options a to d | NEC's official ACtE model question set |
 | Time | 2 hours | Third-party reports of the scheme NEC announced on Bhadra 17, 2082 |
 | Pass mark | 50 percent | Same third-party reports |
-| Split | 10 questions per chapter, at least 1 per sub-chapter | Same third-party reports |
+| Split, as reported | 10 questions per chapter, at least 1 per sub-chapter | Same third-party reports |
+| Split, in the official model set | Questions 1 to 60: one per sub-chapter in syllabus order. Questions 61 to 100: 40 more from chapters 1 to 9, none from chapter 10 | NEC's official ACtE model question set |
 | Negative marking | None reported | Unconfirmed |
+
+The two splits agree that every sub-chapter gets at least one question. They disagree on chapter 10, which gets 10 questions in one and 6 in the other.
 
 NEC has changed the pattern before. The skill asks you to confirm it against your own NEC notice or admit card before the first mock exam, and uses whatever you tell it.
 
@@ -124,7 +128,7 @@ Issues and pull requests are welcome. For a syllabus or exam-pattern correction,
 
 ## Version
 
-2.0.0. The version history is at the end of `SKILL.md`.
+2.1.0. The version history is at the end of `SKILL.md`.
 
 ## License
 
